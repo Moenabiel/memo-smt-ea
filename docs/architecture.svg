@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" width="960" height="640" role="img" aria-label="MEMO XAU/XAG SMT EA architecture: a twelve-step signal pipeline from liquidity maps through correlation, session and news gates to risk controls and execution, with a manager layer handling symbols, risk, trades, statistics, visualisation and logging.">
+  <style>
+    .bg { fill: #050708; }
+    .panel { fill: #101515; stroke: #233131; stroke-width: 1; }
+    .box { fill: #131b1b; stroke: #2b3a3a; stroke-width: 1; }
+    .gate { fill: #131b1b; stroke: #a6ff4d; stroke-width: 1.5; }
+    .h { font: 600 15px ui-monospace, "SF Mono", Menlo, Consolas, monospace; fill: #ffffff; }
+    .t { font: 400 12.5px ui-monospace, "SF Mono", Menlo, Consolas, monospace; fill: #e8f3f1; }
+    .n { font: 600 11px ui-monospace, "SF Mono", Menlo, Consolas, monospace; fill: #39f5b4; }
+    .s { font: 400 11.5px ui-monospace, "SF Mono", Menlo, Consolas, monospace; fill: #8a9a9a; }
+    .arrow { stroke: #566b6b; stroke-width: 1.3; fill: none; marker-end: url(#head); }
+    .warn { font: 400 12px ui-monospace, "SF Mono", Menlo, Consolas, monospace; fill: #a6ff4d; }
+  </style>
+
+  <defs>
+    <marker id="head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#566b6b" />
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="960" height="640" rx="10" />
+
+  <text class="h" x="40" y="44">MEMO XAU/XAG SMT EA — signal pipeline & control layer</text>
+  <text class="s" x="40" y="66">12 ordered steps · every gate can veto the trade · gold and silver are traded only against each other</text>
+
+  <!-- Row 1 -->
+  <rect class="box" x="40" y="92" width="270" height="56" rx="6" />
+  <text class="n" x="54" y="112">01</text><text class="t" x="78" y="112">Liquidity maps</text>
+  <text class="s" x="54" y="134">previous day / week, session, NY opening range</text>
+
+  <rect class="box" x="345" y="92" width="270" height="56" rx="6" />
+  <text class="n" x="359" y="112">02</text><text class="t" x="383" y="112">SMT detection</text>
+  <text class="s" x="359" y="134">tier 1 / tier 2 divergence, tier-3 confirmation</text>
+
+  <rect class="box" x="650" y="92" width="270" height="56" rx="6" />
+  <text class="n" x="664" y="112">03</text><text class="t" x="688" y="112">Instrument selection</text>
+  <text class="s" x="664" y="134">trade only the instrument that refuses the sweep</text>
+
+  <!-- Row 2 -->
+  <rect class="gate" x="650" y="176" width="270" height="56" rx="6" />
+  <text class="n" x="664" y="196">04</text><text class="t" x="688" y="196">Correlation gate</text>
+  <text class="s" x="664" y="218">rolling XAU/XAG return correlation must validate</text>
+
+  <rect class="gate" x="345" y="176" width="270" height="56" rx="6" />
+  <text class="n" x="359" y="196">05</text><text class="t" x="383" y="196">Session + news gates</text>
+  <text class="s" x="359" y="218">broker-time windows, black-out calendar</text>
+
+  <rect class="gate" x="40" y="176" width="270" height="56" rx="6" />
+  <text class="n" x="54" y="196">06</text><text class="t" x="78" y="196">Market regime</text>
+  <text class="s" x="54" y="218">trend / range / expansion / reversal / volatility</text>
+
+  <!-- Row 3 -->
+  <rect class="box" x="40" y="260" width="270" height="56" rx="6" />
+  <text class="n" x="54" y="280">07</text><text class="t" x="78" y="280">Displacement</text>
+  <text class="s" x="54" y="302">impulsive candle, ATR/body ratio, FVG creation</text>
+
+  <rect class="box" x="345" y="260" width="270" height="56" rx="6" />
+  <text class="n" x="359" y="280">08</text><text class="t" x="383" y="280">Market structure</text>
+  <text class="s" x="359" y="302">MSS or CHOCH swing break required</text>
+
+  <rect class="box" x="650" y="260" width="270" height="56" rx="6" />
+  <text class="n" x="664" y="280">09</text><text class="t" x="688" y="280">Premium / discount</text>
+  <text class="s" x="664" y="302">dealing-range position validated</text>
+
+  <!-- Row 4 -->
+  <rect class="box" x="650" y="344" width="270" height="56" rx="6" />
+  <text class="n" x="664" y="364">10</text><text class="t" x="688" y="364">FVG / order-block retest</text>
+  <text class="s" x="664" y="386">entry must retest an institutional zone</text>
+
+  <rect class="box" x="345" y="344" width="270" height="56" rx="6" />
+  <text class="n" x="359" y="364">11</text><text class="t" x="383" y="364">Setup scoring</text>
+  <text class="s" x="359" y="386">transparent confidence breakdown</text>
+
+  <rect class="gate" x="40" y="344" width="270" height="56" rx="6" />
+  <text class="n" x="54" y="364">12</text><text class="t" x="78" y="364">Risk controls → execution</text>
+  <text class="s" x="54" y="386">drawdown, trade count, loss, emergency shutdown</text>
+
+  <!-- Manager layer -->
+  <rect class="panel" x="40" y="428" width="880" height="96" rx="8" />
+  <text class="t" x="58" y="452">Manager layer — runs the whole system</text>
+  <text class="s" x="58" y="476">SymbolManager (broker metadata, volume constraints) · SessionManager (Asia / London / New York)</text>
+  <text class="s" x="58" y="496">RiskManager (dynamic risk, drawdown, trade limits, loss shutdown) · TradeManager (execution, break-even, partials, ATR/structure/FVG trailing)</text>
+  <text class="s" x="58" y="516">StatisticsManager (setup journal, 180-day performance) · VisualizationManager (levels, zones, dashboard) · LoggingManager (CSV decision log)</text>
+
+  <!-- Safety -->
+  <rect class="gate" x="40" y="544" width="880" height="56" rx="8" />
+  <text class="warn" x="58" y="568">Safety default: InpAllowLiveTrading = false — signals, logs and setup history run in the strategy tester with no live execution.</text>
+  <text class="s" x="58" y="588">Walk-forward before any claim: train 3–6 months → forward 1 month → stress high-volatility news periods.</text>
+</svg>
